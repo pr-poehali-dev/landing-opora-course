@@ -158,7 +158,7 @@ export default function Index() {
             </Button>
           </div>
           <img 
-            src="https://cdn.poehali.dev/projects/c7c71912-ec78-4b6e-afee-c7ba2fa39b47/files/80f2fa41-2a5b-43a3-8b4d-c94e54309a1f.jpg"
+            src="https://cdn.poehali.dev/files/6bee434e-5859-4352-88f0-e26a9d1ab49a.jpg"
             alt="Энергия чакр"
             className="max-w-3xl mx-auto rounded-3xl shadow-2xl animate-float"
           />
