@@ -265,7 +265,7 @@ export default function Index() {
                       <div className="mt-6 flex flex-wrap gap-3">
                         <div className="flex items-center gap-2 text-sm text-muted-foreground">
                           <Icon name="Clock" size={16} />
-                          <span>60-90 минут</span>
+                          <span>60 минут</span>
                         </div>
                         <div className="flex items-center gap-2 text-sm text-muted-foreground">
                           <Icon name="Users" size={16} />
