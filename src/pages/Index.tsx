@@ -1,8 +1,22 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
+import { useState } from "react";
 
 export default function Index() {
+  const [rotatedButtons, setRotatedButtons] = useState<Set<number>>(new Set());
+
+  const handleButtonClick = (index: number) => {
+    setRotatedButtons(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(index)) {
+        newSet.delete(index);
+      } else {
+        newSet.add(index);
+      }
+      return newSet;
+    });
+  };
   const chakras = [
     {
       name: "Муладхара",
@@ -238,7 +252,13 @@ export default function Index() {
                     <p className="text-lg mb-2">{chakra.description}</p>
                     <p className="text-primary font-semibold">{chakra.class}</p>
                   </div>
-                  <Button variant="outline" className="hover:scale-105 transition-transform">
+                  <Button 
+                    variant="outline" 
+                    className={`transition-all duration-500 ${
+                      rotatedButtons.has(index) ? 'rotate-180' : 'rotate-0'
+                    }`}
+                    onClick={() => handleButtonClick(index)}
+                  >
                     Подробнее
                   </Button>
                 </CardContent>
